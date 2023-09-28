@@ -1,14 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [breakLength, setBreakLengeth] = useState(5);
+  const [sessionLength, setSessionLength] =useState(25);
+  const [count, setCount] = useState(5);
 
   return (
     <>
-    <h1>hello world</h1>
+    <lable id="break-label">Break Length</lable>
+    <lable id="session-label">Session Length</lable>
+    <button id="break-decrement" >-</button>
+    <button id="session-decrement">-</button>
+    <button id="break-increment" >+</button>
+    <button id="session-increment">+</button>
+    <h2 id="break-length">{breakLength}</h2>
+    <h2 id="session-length">{sessionLength}</h2>
+    <lable id="timer-label">Session</lable>
+
     </>
   )
 }
