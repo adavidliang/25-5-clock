@@ -20,6 +20,7 @@ function App() {
     e.preventDefault();
     if(isPlaying === false) {
       setIsPlaying(true);
+      setTime(time-1);//new
     } else setIsPlaying(false);
   }
  
@@ -41,7 +42,7 @@ function App() {
     <h2 id="break-length">{breakLength}</h2>
     <h2 id="session-length">{sessionLength}</h2>
     <lable id="timer-label">Session</lable>
-    <h2 id="time-left">{timeInM} : {timeInS}</h2>
+    <h2 id="time-left">{timeInM}:{timeInS}</h2>
     <button id="start_stop" onClick={handleplay} >{isPlaying ? "Pause" : "Play"}</button>
     <button id="reset" onClick={handleReset}>Reset</button>
 
