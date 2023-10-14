@@ -45,7 +45,13 @@ function App() {
     <h2 id="time-left">{timeInM}:{timeInS}</h2>
     <button id="start_stop" onClick={handleplay} >{isPlaying ? "Pause" : "Play"}</button>
     <button id="reset" onClick={handleReset}>Reset</button>
-
+    <input type="checkbox" className="toggle " checked />
+    <div className="form-control w-52">
+    <label className="cursor-pointer label">
+      <span className="label-text">Remember me</span> 
+      <input type="checkbox" className="toggle toggle-info"  />
+    </label>
+  </div>
     </>
   )
 }
